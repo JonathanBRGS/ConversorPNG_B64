@@ -195,7 +195,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         int windowHeight = clientRect.bottom - clientRect.top;
 
         int PosXMAIN_MSG = -300 + (windowWidth - width) / 2;
-        int PosYMAIN_MSG = (windowHeight - height) / 5;
+        int PosYMAIN_MSG = (windowHeight - height) - 150;
 
         SetWindowPos(MAIN_MSG, NULL, PosXMAIN_MSG, PosYMAIN_MSG, 0, 0, SWP_NOZORDER | SWP_NOSIZE);
 
@@ -204,7 +204,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
         SetWindowPos(BTN_SELECT, NULL, PosXBTN_SELECT, PosYBTN_SELECT, 0, 0, SWP_NOZORDER | SWP_NOSIZE);
 
-        PosXIMG = 300;// (windowWidth - image->GetWidth()) / 2;
+        PosXIMG = (windowWidth - image->GetWidth()) / 2;
         PosYIMG = 0;
 
         // Solicita a repintura da janela
